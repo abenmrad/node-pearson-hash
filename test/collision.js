@@ -91,7 +91,7 @@ if (cluster.isMaster){
 	do {
 		attempt = randomData();
 		count++;
-	} while (!bufEquals(pearson(attempt, 2, seed), pearson(dataToCollision, 2, seed)));
+	} while (!bufEquals(pearson(attempt, undefined, seed), pearson(dataToCollision, undefined, seed)));
 
 	cluster.worker.send(attempt.toString('hex') + '\r\n' + count.toString());
 }

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoldenHamster/node-pearson-hash.git"
+    "url": "https://github.com/BatikhSouri/node-pearson-hash.git"
   },
   "keywords": [
     "pearson",
@@ -17,7 +17,7 @@
   "author": "BatikhSouri",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GoldenHamster/node-pearson-hash/issues"
+    "url": "https://github.com/BatikhSouri/node-pearson-hash/issues"
   },
-  "homepage": "https://github.com/GoldenHamster/node-pearson-hash"
+  "homepage": "https://github.com/BatikhSouri/node-pearson-hash"
 }

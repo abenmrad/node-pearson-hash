@@ -75,6 +75,7 @@ if (cluster.isMaster){
 
 	var seed = new Buffer(cluster.worker.process.argv[2], 'hex');
 	var dataToCollision = new Buffer(cluster.worker.process.argv[3], 'hex');
+	var hashToCollision = pearson(dataToCollision, null, seed);
 	var attempt;
 	var count = 0;
 
@@ -91,7 +92,7 @@ if (cluster.isMaster){
 	do {
 		attempt = randomData();
 		count++;
-	} while (!bufEquals(pearson(attempt, undefined, seed), pearson(dataToCollision, undefined, seed)));
+	} while (!bufEquals(pearson(attempt, null, seed), hashToCollision));
 
 	cluster.worker.send(attempt.toString('hex') + '\r\n' + count.toString());
 }
